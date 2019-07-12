@@ -1,4 +1,4 @@
-const analyze = require('./analyze');
+const analyze = require('../src/analyze');
 
 test('analyze average', () => {
   expect(analyze.average([1, 8, 3, 4, 2, 6])).toBe(4);

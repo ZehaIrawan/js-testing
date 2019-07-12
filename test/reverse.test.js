@@ -1,4 +1,4 @@
-const reverse = require('./reverse');
+const reverse = require('../src/reverse');
 
 test('reverse', () => {
   expect(reverse('car')).toMatch('rac');

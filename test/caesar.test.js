@@ -1,15 +1,17 @@
-const caesar = require('./caesar');
+const caesar = require('../src/caesar');
 
-test('caesar', () => {
-  expect(caesar('abc', 1)).toMatch('bcd');
-});
-
-test('caesar', () => {
-  expect(caesar('defendtheeastwallofthecastle', 1)).toMatch(
-    'efgfoeuiffbtuxbmmpguifdbtumf'
+test('caesar cypher lowercase', () => {
+  expect(caesar('awesomeness', 4)).toMatch(
+    'eaiwsqiriww',
   );
 });
 
-test('caesar', () => {
-  expect(caesar('sendouttheknights', 25)).toMatch('rdmcntssgdjmhfgsr');
+test('caesar cypher mixed', () => {
+  expect(caesar('CamelCase', 11)).toMatch('NlxpwNldp');
+});
+
+test('caesar cypher punctuation', () => {
+  expect(caesar('attack at dawn!!!', 8)).toMatch(
+    'ibbiks ib liev!!!',
+  );
 });
